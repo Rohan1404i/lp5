@@ -1,3 +1,5 @@
+%%writefile Bubble.cpp
+    
 #include<iostream>
 #include<omp.h>
 
@@ -68,3 +70,6 @@ int main(){
     cout << "Parallel Bubble Sort took : " << end_time - start_time << " seconds.\n";
     printArray(arr, n);
 }   
+
+!g++ Bubble.cpp -o Bubble -fopenmp
+!./Bubble
